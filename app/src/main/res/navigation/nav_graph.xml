@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_authenticationFragment2"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.authentication.AuthenticationFragment"
+        android:label="AuthenticationFragment" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_singInFragment"
+            app:destination="@id/singInFragment" />
+        <action
+            android:id="@+id/action_authenticationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="android.coderrrk.self_employedservice.presentation.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/singInFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.authentication.SingInFragment"
+        android:label="SingInFragment" >
+        <action
+            android:id="@+id/action_singInFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment" />
+        <action
+            android:id="@+id/action_singInFragment_to_userWindowFragment"
+            app:destination="@id/userWindowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.authentication.PasswordRecoveryFragment"
+        android:label="PasswordRecoveryFragment" >
+        <action
+            android:id="@+id/action_passwordRecoveryFragment_to_singInFragment"
+            app:destination="@id/singInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.authentication.RegistrationFragment"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_singInFragment"
+            app:destination="@id/singInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userWindowFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowFragment"
+        android:label="user_window_fragment"
+        tools:layout="@layout/user_window_fragment" />
+</navigation>

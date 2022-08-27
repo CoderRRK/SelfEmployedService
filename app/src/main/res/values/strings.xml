@@ -1,0 +1,39 @@
+<resources name = "RU">
+    <string name="app_name">self-employed service</string>
+
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="password_confirm">Подтвердите пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="phone">Номер телефона</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="recover_password">Восстановить пароль</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="email">Почтовый ящик</string>
+    <string name="write_to_us">Свяжитесь с нами</string>
+
+
+
+
+
+    <string name="all_posts">All posts</string>
+    <string name="my_posts">My posts</string>
+    <string name="create_post">Create post</string>
+    <string name="user">User</string>
+    <string name="distance">Distance</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="logout">Logout</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="location">Location</string>
+    <string name="price">Price</string>
+    <string name="full">Full</string>
+    <string name="per_hour">Per hour</string>
+    <string name="create">Create</string>
+    <string name="unknown_contact">Unknown contact</string>
+    <string name="Welcome">Добро пожаловать!</string>
+    <string name="registration">Зарегистрироваться</string>/>
+
+</resources>
