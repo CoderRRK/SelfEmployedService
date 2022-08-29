@@ -1,7 +1,7 @@
 package android.coderrrk.self_employedservice.presentation.userwindows
 
 import android.coderrrk.self_employedservice.R
-import android.coderrrk.self_employedservice.domain.Item
+import android.coderrrk.self_employedservice.domain.retrofitusecase.Item
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

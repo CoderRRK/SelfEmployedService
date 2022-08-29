@@ -1,4 +1,4 @@
-package android.coderrrk.self_employedservice.domain
+package android.coderrrk.self_employedservice.domain.retrofitusecase
 
 data class Jobs(
     val alternate_url: String,

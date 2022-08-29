@@ -1,4 +1,4 @@
-package android.coderrrk.self_employedservice.domain
+package android.coderrrk.self_employedservice.domain.retrofitusecase
 
 import retrofit2.Response
 

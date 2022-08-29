@@ -36,8 +36,8 @@
             android:id="@+id/action_singInFragment_to_passwordRecoveryFragment"
             app:destination="@id/passwordRecoveryFragment" />
         <action
-            android:id="@+id/action_singInFragment_to_userWindowFragment"
-            app:destination="@id/userWindowFragment" />
+            android:id="@+id/action_singInFragment_to_userWindowRootFragment"
+            app:destination="@id/userWindowRootFragment" />
     </fragment>
     <fragment
         android:id="@+id/passwordRecoveryFragment"
@@ -57,7 +57,22 @@
     </fragment>
     <fragment
         android:id="@+id/userWindowFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeFragment"
         android:label="user_window_fragment"
-        tools:layout="@layout/user_window_fragment" />
+        tools:layout="@layout/user_window_home_fragment" />
+    <fragment
+        android:id="@+id/userWindowRootFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowRootFragment"
+        android:label="UserWindowRootFragment" >
+        <action
+            android:id="@+id/action_userWindowRootFragment_to_userWindowFragment"
+            app:destination="@id/userWindowFragment" />
+        <action
+            android:id="@+id/action_userWindowRootFragment_to_userWindowProfileFragment"
+            app:destination="@id/userWindowProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userWindowProfileFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowProfileFragment"
+        android:label="UserWindowProfileFragment" />
 </navigation>

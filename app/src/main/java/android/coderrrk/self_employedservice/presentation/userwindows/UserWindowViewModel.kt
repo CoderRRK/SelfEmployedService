@@ -1,7 +1,7 @@
 package android.coderrrk.self_employedservice.presentation.userwindows
 
 import android.coderrrk.self_employedservice.data.RepositoryImpl
-import android.coderrrk.self_employedservice.domain.Jobs
+import android.coderrrk.self_employedservice.domain.retrofitusecase.Jobs
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

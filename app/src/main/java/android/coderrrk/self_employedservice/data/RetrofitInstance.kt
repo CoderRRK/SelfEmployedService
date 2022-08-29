@@ -3,6 +3,7 @@ package android.coderrrk.self_employedservice.data
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+//вставляем запрос и преобразовываем в Gson
 object RetrofitInstance {
     private val retrofit by lazy {
         Retrofit.Builder()

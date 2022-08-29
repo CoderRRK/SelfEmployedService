@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.userwindows.UserWindowFragment">
+    tools:context=".presentation.userwindows.UserWindowHomeFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:orientation="horizontal"
         android:weightSum="3">
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -22,7 +23,8 @@
 
         <ImageButton
             android:id="@+id/filterButton"
-            android:src="@drawable/ic_baseline_filter_list_24"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_settings_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -30,7 +32,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="47dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginStart="8dp"

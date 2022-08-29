@@ -1,5 +1,5 @@
 <resources name = "RU">
-    <string name="app_name">self-employed service</string>
+    <string name="app_name">яСамозанятый!</string>
 
     <string name="login">Логин</string>
     <string name="password">Пароль</string>

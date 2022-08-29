@@ -1,6 +1,6 @@
-package android.coderrrk.self_employedservice.domain
+package android.coderrrk.self_employedservice.domain.retrofitusecase
 
-data class Metro(
+data class MetroStation(
     val lat: Double,
     val line_id: String,
     val line_name: String,
