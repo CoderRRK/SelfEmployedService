@@ -7,8 +7,8 @@ import retrofit2.Response
 class RepositoryImpl: Repository {
 
     //реализуем функцию интерфеса домейн слоя
-    override suspend fun getListExchangeRates(): Response<Jobs> {
-        return RetrofitInstance.api.getListExchangeRates()
+    override suspend fun getDataRetro(): Response<Jobs> {
+        return RetrofitInstance.api.getListDataRetro()
     }
 
 }

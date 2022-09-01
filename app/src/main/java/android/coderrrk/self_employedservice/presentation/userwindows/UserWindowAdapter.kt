@@ -2,14 +2,16 @@ package android.coderrrk.self_employedservice.presentation.userwindows
 
 import android.coderrrk.self_employedservice.R
 import android.coderrrk.self_employedservice.domain.retrofitusecase.Item
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.user_window_item.view.*
 
-class UserWindowAdapter: RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder>() {
+class UserWindowAdapter (val myOnClickListener: MyOnClickListener): RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder>() {
 
     var listRetrofitInfo = emptyList<Item>()
 
@@ -22,6 +24,8 @@ class UserWindowAdapter: RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder
 
     override fun onBindViewHolder(holder: UserWindowAdapter.UserWindowHolder, position: Int) {
 
+        val item = listRetrofitInfo[position]
+
         holder.itemView.job_text_view.text = listRetrofitInfo[position].name
         if (listRetrofitInfo[position].salary == null || listRetrofitInfo[position].employer.logo_urls == null){
             holder.itemView.salary_from_text_view.text = "Не указано"
@@ -31,6 +35,10 @@ class UserWindowAdapter: RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder
             holder.itemView.salary_from_text_view.text =
                 listRetrofitInfo[position].salary.from.toString() + " " + listRetrofitInfo[position].salary.currency
         }
+
+        holder.itemView.setOnClickListener(View.OnClickListener{
+            myOnClickListener.onClicked(item)
+        })
     }
 
     override fun getItemCount(): Int {
@@ -41,4 +49,5 @@ class UserWindowAdapter: RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder
         listRetrofitInfo = list
         notifyDataSetChanged()
     }
+
 }

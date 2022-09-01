@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_singInFragment_to_userWindowRootFragment"
             app:destination="@id/userWindowRootFragment" />
+        <action
+            android:id="@+id/action_singInFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
     </fragment>
     <fragment
         android:id="@+id/passwordRecoveryFragment"
@@ -54,25 +57,37 @@
         <action
             android:id="@+id/action_registrationFragment_to_singInFragment"
             app:destination="@id/singInFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/userWindowFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeFragment"
-        android:label="user_window_fragment"
-        tools:layout="@layout/user_window_home_fragment" />
     <fragment
         android:id="@+id/userWindowRootFragment"
         android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowRootFragment"
         android:label="UserWindowRootFragment" >
         <action
-            android:id="@+id/action_userWindowRootFragment_to_userWindowFragment"
-            app:destination="@id/userWindowFragment" />
-        <action
             android:id="@+id/action_userWindowRootFragment_to_userWindowProfileFragment"
             app:destination="@id/userWindowProfileFragment" />
+        <action
+            android:id="@+id/action_userWindowRootFragment_to_userWindowHomeFragment"
+            app:destination="@id/userWindowHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/userWindowProfileFragment"
         android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowProfileFragment"
         android:label="UserWindowProfileFragment" />
+    <fragment
+        android:id="@+id/userWindowHomeFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeFragment"
+        android:label="user_window_home_fragment"
+        tools:layout="@layout/user_window_home_fragment" >
+        <action
+            android:id="@+id/action_userWindowHomeFragment_to_userWindowHomeItemFragment"
+            app:destination="@id/userWindowHomeItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userWindowHomeItemFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeItemFragment"
+        android:label="user_window_home_item_fragment"
+        tools:layout="@layout/user_window_home_item_fragment" />
 </navigation>

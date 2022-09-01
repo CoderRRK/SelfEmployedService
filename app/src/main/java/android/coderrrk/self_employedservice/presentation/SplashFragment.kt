@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.coroutines.*
 
+//Экран приветствия
 class SplashFragment : Fragment() {
 
     override fun onCreateView(

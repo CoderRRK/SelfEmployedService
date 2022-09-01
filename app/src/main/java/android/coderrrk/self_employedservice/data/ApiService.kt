@@ -8,6 +8,6 @@ interface ApiService {
 
     //Запрос JSON
     @GET("vacancies")
-    suspend fun getListExchangeRates(): Response<Jobs>
+    suspend fun getListDataRetro(): Response<Jobs>
 
 }

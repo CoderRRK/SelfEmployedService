@@ -1,5 +1,7 @@
 package android.coderrrk.self_employedservice.domain.retrofitusecase
 
+import java.io.Serializable
+
 data class Item(
     val accept_temporary: Boolean,
     val address: Address,
@@ -30,4 +32,4 @@ data class Item(
     val working_days: List<WorkingDay>,
     val working_time_intervals: List<WorkingTimeInterval>,
     val working_time_modes: List<WorkingTimeMode>
-)
+) : Serializable

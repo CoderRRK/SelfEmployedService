@@ -4,6 +4,6 @@ import retrofit2.Response
 
 interface Repository {
 
-    suspend fun getListExchangeRates(): Response<Jobs>
+    suspend fun getDataRetro(): Response<Jobs>
 
 }
