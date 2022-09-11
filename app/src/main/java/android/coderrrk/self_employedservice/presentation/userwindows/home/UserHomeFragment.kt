@@ -1,4 +1,4 @@
-package android.coderrrk.self_employedservice.presentation.userwindows
+package android.coderrrk.self_employedservice.presentation.userwindows.home
 
 import android.coderrrk.self_employedservice.R
 import android.coderrrk.self_employedservice.domain.retrofitusecase.Item
@@ -9,24 +9,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.user_window_home_fragment.view.*
+import kotlinx.android.synthetic.main.user_home_fragment.view.*
 
 
-class UserWindowHomeFragment() : Fragment() {
+class UserHomeFragment() : Fragment() {
 
     lateinit var recyclerView: RecyclerView
-    lateinit var adapter: UserWindowAdapter
+    lateinit var adapter: UserHomeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewModel = ViewModelProvider(this).get(UserWindowViewModel::class.java)
-        val view = inflater.inflate(R.layout.user_window_home_fragment, container, false)
+        val viewModel = ViewModelProvider(this).get(UserHomeViewModel::class.java)
+        val view = inflater.inflate(R.layout.user_home_fragment, container, false)
         recyclerView = view.recycler_view
-        adapter = UserWindowAdapter(object : MyOnClickListener {
+        adapter = UserHomeAdapter(object : UserHomeOnClickListener {
             override fun onClicked(item: Item) {
-                val fragment = UserWindowHomeItemFragment()
+                val fragment = UserHomeItemFragment()
 
                 val bundle = Bundle()
                 bundle.putSerializable("employer", item.employer.name)

@@ -1,4 +1,4 @@
-package android.coderrrk.self_employedservice.presentation.userwindows
+package android.coderrrk.self_employedservice.presentation.userwindows.root
 
 import android.coderrrk.self_employedservice.R
 import android.content.Context
@@ -8,11 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.user_window_root_fragment.view.*
+import kotlinx.android.synthetic.main.user_root_fragment.view.*
 
-class UserWindowRootFragment: Fragment() {
+class UserRootFragment: Fragment() {
 
     private var ctx: Context?= null
 
@@ -25,9 +24,9 @@ class UserWindowRootFragment: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.user_window_root_fragment, container, false)
+        val view = inflater.inflate(R.layout.user_root_fragment, container, false)
         view.tab_layout.tabIconTint = null
-        view.view_pager.adapter = UserWindowPageAdapter(ctx as FragmentActivity)
+        view.view_pager.adapter = UserPageAdapter(ctx as FragmentActivity)
 
         TabLayoutMediator(view.tab_layout, view.view_pager){
                 tab, pos ->

@@ -1,4 +1,4 @@
-package android.coderrrk.self_employedservice.presentation
+package android.coderrrk.self_employedservice.presentation.welcomescreen
 
 import android.coderrrk.self_employedservice.R
 import android.os.Bundle

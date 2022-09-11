@@ -5,14 +5,12 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".presentation.userwindows.UserWindowProfileFragment">
+    tools:context=".presentation.userwindows.profile.UserProfileFragment">
 
 
     <ImageView
@@ -45,6 +43,7 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/change_profile_button"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,13 +54,27 @@
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Перечень предоставляемых услуг:"
+        android:text="Возможный формат работы:"
         android:textStyle="italic"
         android:textSize="16sp"
         android:gravity="center"/>
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Перечень предоставляемых услуг:"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:gravity="center"/>
 
 </LinearLayout>
 </ScrollView>

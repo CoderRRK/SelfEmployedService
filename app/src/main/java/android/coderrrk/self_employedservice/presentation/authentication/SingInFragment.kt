@@ -27,7 +27,7 @@ class SingInFragment: Fragment() {
             Navigation.findNavController(requireView()).navigate(R.id.action_singInFragment_to_passwordRecoveryFragment)
         })
         binding?.SingInSingIn?.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(requireView()).navigate(R.id.action_singInFragment_to_userWindowRootFragment)
+            Navigation.findNavController(requireView()).navigate(R.id.action_singInFragment_to_userRootFragment)
         })
         return view
     }

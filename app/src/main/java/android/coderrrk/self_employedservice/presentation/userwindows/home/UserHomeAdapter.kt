@@ -1,28 +1,26 @@
-package android.coderrrk.self_employedservice.presentation.userwindows
+package android.coderrrk.self_employedservice.presentation.userwindows.home
 
 import android.coderrrk.self_employedservice.R
 import android.coderrrk.self_employedservice.domain.retrofitusecase.Item
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.user_window_item.view.*
+import kotlinx.android.synthetic.main.user_home_item.view.*
 
-class UserWindowAdapter (val myOnClickListener: MyOnClickListener): RecyclerView.Adapter<UserWindowAdapter.UserWindowHolder>() {
+class UserHomeAdapter (val myOnClickListener: UserHomeOnClickListener): RecyclerView.Adapter<UserHomeAdapter.UserWindowHolder>() {
 
     var listRetrofitInfo = emptyList<Item>()
 
     class UserWindowHolder(view: View) : RecyclerView.ViewHolder(view)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserWindowAdapter.UserWindowHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_window_item, parent, false)
-        return UserWindowAdapter.UserWindowHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserWindowHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_home_item, parent, false)
+        return UserWindowHolder(view)
     }
 
-    override fun onBindViewHolder(holder: UserWindowAdapter.UserWindowHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserWindowHolder, position: Int) {
 
         val item = listRetrofitInfo[position]
 

@@ -32,4 +32,14 @@
     <string name="Welcome">Добро пожаловать!</string>
     <string name="registration">Зарегистрироваться</string>/>
 
+    <string-array name="job_format_array">
+        <item>Индивидуальный предприниматель</item>
+        <item>Самозанятый</item>
+        <item>Договор гражданско-правового характера</item>
+        <item>Договор оказания услуг</item>
+        <item>Договор подряда</item>
+        </string-array>
+
 </resources>
+
+

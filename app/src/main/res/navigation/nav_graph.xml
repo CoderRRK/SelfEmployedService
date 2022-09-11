@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.SplashFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.welcomescreen.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_authenticationFragment2"
@@ -36,8 +36,8 @@
             android:id="@+id/action_singInFragment_to_passwordRecoveryFragment"
             app:destination="@id/passwordRecoveryFragment" />
         <action
-            android:id="@+id/action_singInFragment_to_userWindowRootFragment"
-            app:destination="@id/userWindowRootFragment" />
+            android:id="@+id/action_singInFragment_to_userRootFragment"
+            app:destination="@id/userRootFragment" />
         <action
             android:id="@+id/action_singInFragment_to_authenticationFragment"
             app:destination="@id/authenticationFragment" />
@@ -62,32 +62,45 @@
             app:destination="@id/authenticationFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userWindowRootFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowRootFragment"
-        android:label="UserWindowRootFragment" >
+        android:id="@+id/userRootFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.root.UserRootFragment"
+        android:label="UserRootFragment" >
         <action
-            android:id="@+id/action_userWindowRootFragment_to_userWindowProfileFragment"
-            app:destination="@id/userWindowProfileFragment" />
+            android:id="@+id/action_userRootFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
         <action
-            android:id="@+id/action_userWindowRootFragment_to_userWindowHomeFragment"
-            app:destination="@id/userWindowHomeFragment" />
+            android:id="@+id/action_userRootFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userWindowProfileFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowProfileFragment"
-        android:label="UserWindowProfileFragment" />
-    <fragment
-        android:id="@+id/userWindowHomeFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeFragment"
-        android:label="user_window_home_fragment"
-        tools:layout="@layout/user_window_home_fragment" >
+        android:id="@+id/userHomeFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.home.UserHomeFragment"
+        android:label="user_home_fragment"
+        tools:layout="@layout/user_home_fragment" >
         <action
-            android:id="@+id/action_userWindowHomeFragment_to_userWindowHomeItemFragment"
-            app:destination="@id/userWindowHomeItemFragment" />
+            android:id="@+id/action_userHomeFragment_to_userHomeItemFragment"
+            app:destination="@id/userHomeItemFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userWindowHomeItemFragment"
-        android:name="android.coderrrk.self_employedservice.presentation.userwindows.UserWindowHomeItemFragment"
-        android:label="user_window_home_item_fragment"
-        tools:layout="@layout/user_window_home_item_fragment" />
+        android:id="@+id/userHomeItemFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.home.UserHomeItemFragment"
+        android:label="user_home_item_fragment"
+        tools:layout="@layout/user_home_item_fragment" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.profile.UserProfileFragment"
+        android:label="UserProfileFragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_userProfileItemFragment"
+            app:destination="@id/userProfileItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileItemFragment"
+        android:name="android.coderrrk.self_employedservice.presentation.userwindows.profile.UserProfileItemFragment"
+        android:label="user_profile_item_fragment"
+        tools:layout="@layout/user_profile_item_fragment" >
+        <action
+            android:id="@+id/action_userProfileItemFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
 </navigation>
